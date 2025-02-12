@@ -8,7 +8,7 @@ def generate_date():
     return datetime.now().strftime("%Y-%m-%d")
 
 def generate_date_path():
-    return datetime.now().strftime("/%Y/%m/%d")
+    return datetime.now().strftime("%Y\\%m\\%d")
 
 def VeilleMoniteur(url, search_terms, output_csv="decrees_results.csv"):
     """
@@ -68,7 +68,8 @@ def VeilleMoniteur(url, search_terms, output_csv="decrees_results.csv"):
 SearchTermList = ["pesticide","autorisation", "produit phytosanitaire","zone tampon", "produits phytopharmaceutiques", "herbicide", "local phyto", "plantes exotiques envahissante", "herbicides"]
 
 dailyID = generate_date()
-dailyPath = generate_date_path ()
+dailyPath = generate_date_path()
+
 url = f"https://www.ejustice.just.fgov.be/cgi/summary.pl?language=fr&sumnext={dailyID}"
 
 VeilleMoniteur(url, SearchTermList,f"Rapports\\{dailyPath} - VeilleMoniteur.csv")
