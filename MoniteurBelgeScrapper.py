@@ -71,7 +71,7 @@ def generate_markdown_report(csv_file, output_file="report.md"):
     last_day_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Dernière journée")
     plt.ylabel("")
-    plt.savefig("last_day_pie.png")
+    plt.savefig("img\last_day_pie.png")
     plt.close()
     
     # Tableau des données pour la dernière journée
@@ -85,7 +85,7 @@ def generate_markdown_report(csv_file, output_file="report.md"):
     total_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Global")
     plt.ylabel("")
-    plt.savefig("global_pie.png")
+    plt.savefig("img\global_pie.png")
     plt.close()
     
     # Nombre de termes cités par jour
@@ -99,7 +99,7 @@ def generate_markdown_report(csv_file, output_file="report.md"):
     plt.ylabel("Nombre d'occurrences")
     plt.xticks(rotation=45)
     plt.grid()
-    plt.savefig("evolution_line.png")
+    plt.savefig("img\evolution_line.png")
     plt.close()
     
     # Génération du Markdown
@@ -108,15 +108,15 @@ def generate_markdown_report(csv_file, output_file="report.md"):
         f.write(f"**Dernière mise à jour : {last_date}**\n\n")
         
         f.write("## Termes les plus cités (dernière journée)\n\n")
-        f.write("![Graphique](last_day_pie.png)\n\n")
+        f.write("![Graphique](img\last_day_pie.png)\n\n")
         
         f.write("### Données de la dernière journée\n\n")
         f.write(last_day_table.to_markdown(index=False))
         f.write("\n\n")
         
         f.write("## Évolution globale\n\n")
-        f.write("![Graphique](global_pie.png)\n\n")
-        f.write("![Graphique](evolution_line.png)\n\n")
+        f.write("![Graphique](img\global_pie.png)\n\n")
+        f.write("![Graphique](img\evolution_line.png)\n\n")
     
     print(f"Rapport généré : {output_file}")
 
