@@ -107,7 +107,7 @@ def generate_daily_report(csv_path, output_dir="./"):
 **Dernière mise à jour : {derniere_date}**
 
 ## Répartition des termes les plus cités ({derniere_date})
-![Pie Chart](pie_chart_last_day.png)
+![Pie Chart](img\\pie_chart_last_day.png)
 
 ### Détails des occurrences pour la dernière journée
 | Terme | Page | Occurrence |
@@ -122,10 +122,10 @@ def generate_daily_report(csv_path, output_dir="./"):
 # Évolution globale
 
 ## Répartition des termes les plus cités (toutes dates confondues)
-![Pie Chart](pie_chart_all_days.png)
+![Pie Chart](img\\pie_chart_all_days.png)
 
 ## Évolution du nombre de termes cités par jour
-![Line Chart](line_chart_terms_per_day.png)
+![Line Chart](img\\line_chart_terms_per_day.png)
 """
     
     return markdown_content

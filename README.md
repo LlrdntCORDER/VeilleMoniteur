@@ -4,7 +4,7 @@
 **Dernière mise à jour : 2025-02-14**
 
 ## Répartition des termes les plus cités (2025-02-14)
-![Pie Chart](pie_chart_last_day.png)
+![Pie Chart](img\pie_chart_last_day.png)
 
 ### Détails des occurrences pour la dernière journée
 | Terme | Page | Occurrence |
@@ -110,7 +110,7 @@
 # Évolution globale
 
 ## Répartition des termes les plus cités (toutes dates confondues)
-![Pie Chart](pie_chart_all_days.png)
+![Pie Chart](img\pie_chart_all_days.png)
 
 ## Évolution du nombre de termes cités par jour
-![Line Chart](line_chart_terms_per_day.png)
+![Line Chart](img\line_chart_terms_per_day.png)
