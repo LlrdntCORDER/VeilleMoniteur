@@ -1,0 +1,105 @@
+---
+layout: default
+title: "Résultats de l'extraction"
+---
+
+# 📄 Résultats de l'extraction
+
+| Date       | Terme        |   Numéro de page |   Occurences |
+|:-----------|:-------------|-----------------:|-------------:|
+| 2025-02-14 | travail      |                1 |            8 |
+| 2025-02-14 | travail      |                2 |           13 |
+| 2025-02-14 | travail      |                3 |            1 |
+| 2025-02-14 | travail      |                4 |            4 |
+| 2025-02-14 | travail      |               17 |           15 |
+| 2025-02-14 | travail      |               18 |            7 |
+| 2025-02-14 | travail      |               19 |           16 |
+| 2025-02-14 | travail      |               20 |           17 |
+| 2025-02-14 | travail      |               21 |           16 |
+| 2025-02-14 | travail      |               22 |           30 |
+| 2025-02-14 | travail      |               23 |           17 |
+| 2025-02-14 | travail      |               24 |           31 |
+| 2025-02-14 | travail      |               25 |           16 |
+| 2025-02-14 | travail      |               26 |           10 |
+| 2025-02-14 | travail      |               27 |           14 |
+| 2025-02-14 | travail      |               28 |            5 |
+| 2025-02-14 | travail      |               29 |           16 |
+| 2025-02-14 | travail      |               30 |           18 |
+| 2025-02-14 | travail      |               31 |           29 |
+| 2025-02-14 | travail      |               32 |            7 |
+| 2025-02-14 | travail      |               33 |            8 |
+| 2025-02-14 | travail      |               34 |           17 |
+| 2025-02-14 | travail      |               35 |            4 |
+| 2025-02-14 | travail      |               36 |           11 |
+| 2025-02-14 | travail      |               37 |           11 |
+| 2025-02-14 | travail      |               38 |            7 |
+| 2025-02-14 | travail      |               39 |            9 |
+| 2025-02-14 | travail      |               40 |            7 |
+| 2025-02-14 | travail      |               41 |            1 |
+| 2025-02-14 | autorisation |               41 |           11 |
+| 2025-02-14 | autorisation |               42 |            6 |
+| 2025-02-14 | autorisation |               43 |            6 |
+| 2025-02-14 | travail      |               43 |            7 |
+| 2025-02-14 | travail      |               44 |            3 |
+| 2025-02-14 | travail      |               45 |            6 |
+| 2025-02-14 | travail      |               46 |            6 |
+| 2025-02-14 | autorisation |               46 |            1 |
+| 2025-02-14 | travail      |               47 |            2 |
+| 2025-02-14 | travail      |               48 |            5 |
+| 2025-02-14 | travail      |               49 |            2 |
+| 2025-02-14 | autorisation |               49 |            5 |
+| 2025-02-14 | travail      |               50 |            6 |
+| 2025-02-14 | autorisation |               50 |            1 |
+| 2025-02-14 | autorisation |               51 |            4 |
+| 2025-02-14 | travail      |               52 |            1 |
+| 2025-02-14 | travail      |               54 |            2 |
+| 2025-02-14 | travail      |               55 |            1 |
+| 2025-02-14 | travail      |               56 |            5 |
+| 2025-02-14 | autorisation |               57 |            6 |
+| 2025-02-14 | travail      |               57 |            1 |
+| 2025-02-14 | travail      |               58 |            3 |
+| 2025-02-14 | travail      |               59 |            1 |
+| 2025-02-14 | autorisation |               59 |            5 |
+| 2025-02-14 | autorisation |               60 |            2 |
+| 2025-02-14 | travail      |               61 |            3 |
+| 2025-02-14 | autorisation |               63 |            1 |
+| 2025-02-14 | autorisation |               65 |            1 |
+| 2025-02-14 | travail      |              115 |            4 |
+| 2025-02-14 | travail      |              119 |            2 |
+| 2025-02-14 | travail      |              122 |            3 |
+| 2025-02-14 | travail      |              124 |            2 |
+| 2025-02-14 | travail      |              127 |            6 |
+| 2025-02-14 | travail      |              128 |            3 |
+| 2025-02-14 | travail      |              190 |            2 |
+| 2025-02-14 | travail      |              191 |            2 |
+| 2025-02-14 | autorisation |              193 |            1 |
+| 2025-02-14 | autorisation |              194 |            1 |
+| 2025-02-14 | travail      |              195 |            1 |
+| 2025-02-14 | autorisation |              197 |            2 |
+| 2025-02-14 | autorisation |              199 |            3 |
+| 2025-02-14 | autorisation |              200 |            2 |
+| 2025-02-14 | travail      |              200 |            1 |
+| 2025-02-14 | travail      |              203 |            1 |
+| 2025-02-14 | autorisation |              203 |            2 |
+| 2025-02-14 | autorisation |              204 |            4 |
+| 2025-02-14 | travail      |              204 |            1 |
+| 2025-02-14 | autorisation |              206 |            1 |
+| 2025-02-14 | travail      |              210 |            3 |
+| 2025-02-14 | autorisation |              211 |            1 |
+| 2025-02-14 | travail      |              211 |            1 |
+| 2025-02-14 | travail      |              212 |            3 |
+| 2025-02-14 | travail      |              214 |            8 |
+| 2025-02-14 | travail      |              215 |            3 |
+| 2025-02-14 | travail      |              216 |            1 |
+| 2025-02-14 | travail      |              218 |            1 |
+| 2025-02-14 | travail      |              219 |            1 |
+| 2025-02-14 | autorisation |              220 |            1 |
+| 2025-02-14 | travail      |              226 |            2 |
+| 2025-02-14 | autorisation |              226 |            1 |
+| 2025-02-14 | autorisation |              227 |            1 |
+| 2025-02-14 | travail      |              229 |            3 |
+| 2025-02-14 | travail      |              230 |            2 |
+| 2025-02-14 | travail      |              232 |            1 |
+| 2025-02-14 | travail      |              236 |            3 |
+| 2025-02-14 | travail      |              237 |            2 |
+| 2025-02-14 | travail      |              242 |            1 |
