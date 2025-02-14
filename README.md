@@ -4,7 +4,7 @@
 
 ## Termes les plus cités (dernière journée)
 
-![Graphique](last_day_pie.png)
+![Graphique](img/last_day_pie.png)
 
 ### Données de la dernière journée
 
@@ -109,7 +109,7 @@
 
 ## Évolution globale
 
-![Graphique](global_pie.png)
+![Graphique](img/global_pie.png)
 
-![Graphique](evolution_line.png)
+![Graphique](img/evolution_line.png)
 
