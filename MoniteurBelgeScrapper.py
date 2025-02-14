@@ -42,22 +42,6 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     df.to_csv(output_csv, sep=";", index=False)
     print(f"Extraction terminée. Résultats enregistrés dans {output_csv}")
 
-def generate_md_from_csv(csv_file, output_md):
-    df = pd.read_csv(csv_file, delimiter=";")
-    table_md = df.to_markdown(index=False)
-    md_template = f'''---
-layout: default
-title: "Résultats de l'extraction"
----
-
-# 📄 Résultats de l'extraction
-
-{table_md}
-'''
-    with open(output_md, "w", encoding="utf-8") as f:
-        f.write(md_template)
-    print(f"Page Markdown générée : {output_md}")
-
 dailyIDPath = generate_date("path")
 url = f"https://www.ejustice.just.fgov.be/mopdf{dailyIDPath}_1.pdf"
 date = generate_date()
@@ -65,4 +49,3 @@ PDFPath = download_pdf(url)
 if PDFPath:
     SearchTermList = ["pesticide", "autorisation", "travail", "produit phytosanitaire", "zone tampon", "produits phytopharmaceutiques", "herbicide", "local phyto", "plantes exotiques envahissante", "herbicides"]
     extract_terms_from_pdf(PDFPath, SearchTermList, date, "result/Data.csv")
-    generate_md_from_csv("result/Data.csv", "index.md")
