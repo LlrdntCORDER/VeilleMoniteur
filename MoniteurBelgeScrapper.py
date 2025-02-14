@@ -3,7 +3,8 @@ from PyPDF2 import PdfReader
 import os, requests, csv, re
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from io import BytesIO
+import base64
 
 
 def generate_date(mode="default"):
@@ -45,94 +46,82 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     df.to_csv(output_csv, sep=";", index=False)
     print(f"Extraction terminée. Résultats enregistrés dans {output_csv}")
 
+def fig_to_base64(fig):
+    buf = BytesIO()
+    fig.savefig(buf, format="png")
+    buf.seek(0)
+    return base64.b64encode(buf.read()).decode('utf-8')
 
-def generate_daily_report(csv_path, output_dir="./"):
+def generate_markdown_report(csv_file, output_file="README.md"):
     # Charger les données
-    df = pd.read_csv(csv_path, sep=";")
+    df = pd.read_csv(csv_file, delimiter=';')
+    df["Date"] = pd.to_datetime(df["Date"])  # Convertir en datetime
     
-    # Vérifier si le fichier contient des données
-    if df.empty:
-        return "Aucune donnée disponible."
+    # Dernière date mentionnée
+    last_date = df["Date"].max().strftime("%Y-%m-%d")
     
-    # Récupérer la dernière date mentionnée
-    derniere_date = df["Date"].max()
-    df_last_day = df[df["Date"] == derniere_date]
+    # Filtrer les données pour la dernière journée
+    last_day_data = df[df["Date"] == df["Date"].max()]
     
-    # Agréger les occurrences des termes pour la dernière journée
-    terms_last_day = df_last_day.groupby("Terme")["Occurences"].sum()
+    # Agréger les occurrences par terme pour la dernière journée
+    last_day_terms = last_day_data.groupby("Terme")["Occurences"].sum()
     
-    # Générer une pie chart pour la dernière journée
-    pie_chart_last_day_path = os.path.join(output_dir, "img\\pie_chart_last_day.png")
-    plt.figure(figsize=(8, 6))
-    terms_last_day.plot.pie(autopct="%1.1f%%", startangle=90)
-    plt.title(f"Répartition des termes les plus cités ({derniere_date})")
+    # Graphique des termes les plus cités (dernière journée)
+    fig, ax = plt.subplots(figsize=(6, 6))
+    last_day_terms.plot(kind="pie", autopct='%1.1f%%', ax=ax)
+    plt.title("Termes les plus cités - Dernière journée")
     plt.ylabel("")
-    plt.savefig(pie_chart_last_day_path)
-    plt.close()
+    last_day_pie_base64 = fig_to_base64(fig)
+    plt.close(fig)
     
-    # Préparer le tableau des données pour la dernière journée
-    df_last_day_sorted = df_last_day.sort_values(by="Occurences", ascending=False)
-    table_last_day = df_last_day_sorted[["Terme", "Numéro de page", "Occurences"]]
+    # Tableau des données pour la dernière journée
+    last_day_table = last_day_data[["Terme", "Numéro de page", "Occurences"]]
     
-    # Agréger les occurrences des termes pour toutes les dates
-    terms_all_days = df.groupby("Terme")["Occurences"].sum()
+    # Agréger les occurrences par terme (toutes dates confondues)
+    total_terms = df.groupby("Terme")["Occurences"].sum()
     
-    # Générer une pie chart pour toutes les dates
-    pie_chart_all_days_path = os.path.join(output_dir, "img\\pie_chart_all_days.png")
-    plt.figure(figsize=(8, 6))
-    terms_all_days.plot.pie(autopct="%1.1f%%", startangle=90)
-    plt.title("Répartition des termes les plus cités (toutes dates confondues)")
+    # Graphique des termes les plus cités (toutes dates confondues)
+    fig, ax = plt.subplots(figsize=(6, 6))
+    total_terms.plot(kind="pie", autopct='%1.1f%%', ax=ax)
+    plt.title("Termes les plus cités - Global")
     plt.ylabel("")
-    plt.savefig(pie_chart_all_days_path)
-    plt.close()
+    global_pie_base64 = fig_to_base64(fig)
+    plt.close(fig)
     
-    # Compter le nombre total d'occurrences de termes par jour
-    terms_per_day = df.groupby("Date")["Occurences"].sum()
+    # Nombre de termes cités par jour
+    daily_counts = df.groupby("Date")["Occurences"].sum()
     
-    # Générer une line chart pour l'évolution globale
-    line_chart_terms_per_day_path = os.path.join(output_dir, "img\\line_chart_terms_per_day.png")
-    plt.figure(figsize=(10, 5))
-    plt.plot(terms_per_day.index, terms_per_day.values, marker="o", linestyle="-")
-    plt.xlabel("Date")
-    plt.ylabel("Nombre total d'occurrences")
+    # Graphique de l'évolution des termes cités
+    fig, ax = plt.subplots(figsize=(8, 4))
+    daily_counts.plot(kind="line", marker="o", ax=ax)
     plt.title("Évolution du nombre de termes cités par jour")
+    plt.xlabel("Date")
+    plt.ylabel("Nombre d'occurrences")
     plt.xticks(rotation=45)
-    plt.savefig(line_chart_terms_per_day_path)
-    plt.close()
+    plt.grid()
+    evolution_line_base64 = fig_to_base64(fig)
+    plt.close(fig)
     
-    # Générer le contenu Markdown
-    markdown_content = f"""
-# Rapport quotidien
-
-**Dernière mise à jour : {derniere_date}**
-
-## Répartition des termes les plus cités ({derniere_date})
-![Pie Chart](img\\pie_chart_last_day.png)
-
-### Détails des occurrences pour la dernière journée
-| Terme | Page | Occurrence |
-|-------|------|------------|
-"""
+    # Génération du Markdown
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(f"# Rapport quotidien\n\n")
+        f.write(f"**Dernière mise à jour : {last_date}**\n\n")
+        
+        f.write("## Termes les plus cités (dernière journée)\n\n")
+        f.write(f"![Graphique](data:image/png;base64,{last_day_pie_base64})\n\n")
+        
+        f.write("### Données de la dernière journée\n\n")
+        f.write(last_day_table.to_markdown(index=False))
+        f.write("\n\n")
+        
+        f.write("## Évolution globale\n\n")
+        f.write(f"![Graphique](data:image/png;base64,{global_pie_base64})\n\n")
+        f.write(f"![Graphique](data:image/png;base64,{evolution_line_base64})\n\n")
     
-    for _, row in table_last_day.iterrows():
-        markdown_content += f"| {row['Terme']} | {row['Numéro de page']} | {row['Occurences']} |\n"
-    
-    markdown_content += f"""
+    print(f"Rapport généré : {output_file}")
 
-# Évolution globale
 
-## Répartition des termes les plus cités (toutes dates confondues)
-![Pie Chart](img\\pie_chart_all_days.png)
 
-## Évolution du nombre de termes cités par jour
-![Line Chart](img\\line_chart_terms_per_day.png)
-"""
-    
-    return markdown_content
-
-def ReadMeUpdater():
-    with open ("README.md","w",encoding="utf-8") as ReadMeFile:
-        ReadMeFile.write(generate_daily_report("result\\Data.csv"))
     
 dailyIDPath = generate_date("path")
 url = f"https://www.ejustice.just.fgov.be/mopdf{dailyIDPath}_1.pdf"
@@ -142,6 +131,5 @@ PDFPath = download_pdf(url)
 
 SearchTermList = ["pesticide", "autorisation", "travail", "produit phytosanitaire", "zone tampon", "produits phytopharmaceutiques", "herbicide", "local phyto", "plantes exotiques envahissante", "herbicides"]
 extract_terms_from_pdf(PDFPath, SearchTermList, date, "result/Data.csv")
-ReadMeUpdater()
-
+generate_markdown_report("result\\Data.csv", output_file="README.md")
 
