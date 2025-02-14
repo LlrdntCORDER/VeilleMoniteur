@@ -67,10 +67,11 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     temp = []
     for ResInfo in results:
         Instances = results.count(ResInfo)
-        temp.append(ResInfo)
-        ResInfo.append(Instances)
+        FinalResInfo = ResInfo
+        FinalResInfo.append(Instances)
         if ResInfo not in temp :
-            FinalResult.append (ResInfo)
+            FinalResult.append (FinalResInfo)
+            temp.append(ResInfo)
         else:
             pass
     # Écriture dans le fichier CSV
