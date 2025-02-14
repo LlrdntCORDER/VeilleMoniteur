@@ -4,7 +4,7 @@
 
 ## Termes les plus cités (dernière journée)
 
-![Graphique](last_day_pie.png)
+![Graphique](img\last_day_pie.png)
 
 ### Données de la dernière journée
 
