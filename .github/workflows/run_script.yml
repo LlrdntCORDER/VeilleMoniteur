@@ -1,0 +1,27 @@
+name: Run Python Script on Schedule
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Exécute tous les jours à 8h UTC
+
+  workflow_dispatch: # Permet de lancer manuellement l'action
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Utilise une machine Linux sur GitHub Actions
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Clone le repo
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'  # Change selon la version de Python dont tu as besoin
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run script
+        run: python ton_script.py  # Remplace par le nom de ton script
