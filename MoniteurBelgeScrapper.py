@@ -52,7 +52,7 @@ def fig_to_base64(fig):
     buf.seek(0)
     return base64.b64encode(buf.read()).decode('utf-8')
 
-def generate_markdown_report(csv_file, output_file="README.md"):
+def generate_markdown_report(csv_file, output_file="report.md"):
     # Charger les données
     df = pd.read_csv(csv_file, delimiter=';')
     df["Date"] = pd.to_datetime(df["Date"])  # Convertir en datetime
@@ -67,12 +67,12 @@ def generate_markdown_report(csv_file, output_file="README.md"):
     last_day_terms = last_day_data.groupby("Terme")["Occurences"].sum()
     
     # Graphique des termes les plus cités (dernière journée)
-    fig, ax = plt.subplots(figsize=(6, 6))
-    last_day_terms.plot(kind="pie", autopct='%1.1f%%', ax=ax)
+    plt.figure(figsize=(6, 6))
+    last_day_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Dernière journée")
     plt.ylabel("")
-    last_day_pie_base64 = fig_to_base64(fig)
-    plt.close(fig)
+    plt.savefig("last_day_pie.png")
+    plt.close()
     
     # Tableau des données pour la dernière journée
     last_day_table = last_day_data[["Terme", "Numéro de page", "Occurences"]]
@@ -81,26 +81,26 @@ def generate_markdown_report(csv_file, output_file="README.md"):
     total_terms = df.groupby("Terme")["Occurences"].sum()
     
     # Graphique des termes les plus cités (toutes dates confondues)
-    fig, ax = plt.subplots(figsize=(6, 6))
-    total_terms.plot(kind="pie", autopct='%1.1f%%', ax=ax)
+    plt.figure(figsize=(6, 6))
+    total_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Global")
     plt.ylabel("")
-    global_pie_base64 = fig_to_base64(fig)
-    plt.close(fig)
+    plt.savefig("global_pie.png")
+    plt.close()
     
     # Nombre de termes cités par jour
     daily_counts = df.groupby("Date")["Occurences"].sum()
     
     # Graphique de l'évolution des termes cités
-    fig, ax = plt.subplots(figsize=(8, 4))
-    daily_counts.plot(kind="line", marker="o", ax=ax)
+    plt.figure(figsize=(8, 4))
+    daily_counts.plot(kind="line", marker="o")
     plt.title("Évolution du nombre de termes cités par jour")
     plt.xlabel("Date")
     plt.ylabel("Nombre d'occurrences")
     plt.xticks(rotation=45)
     plt.grid()
-    evolution_line_base64 = fig_to_base64(fig)
-    plt.close(fig)
+    plt.savefig("evolution_line.png")
+    plt.close()
     
     # Génération du Markdown
     with open(output_file, "w", encoding="utf-8") as f:
@@ -108,15 +108,15 @@ def generate_markdown_report(csv_file, output_file="README.md"):
         f.write(f"**Dernière mise à jour : {last_date}**\n\n")
         
         f.write("## Termes les plus cités (dernière journée)\n\n")
-        f.write(f"![Graphique](data:image/png;base64,{last_day_pie_base64})\n\n")
+        f.write("![Graphique](last_day_pie.png)\n\n")
         
         f.write("### Données de la dernière journée\n\n")
         f.write(last_day_table.to_markdown(index=False))
         f.write("\n\n")
         
         f.write("## Évolution globale\n\n")
-        f.write(f"![Graphique](data:image/png;base64,{global_pie_base64})\n\n")
-        f.write(f"![Graphique](data:image/png;base64,{evolution_line_base64})\n\n")
+        f.write("![Graphique](global_pie.png)\n\n")
+        f.write("![Graphique](evolution_line.png)\n\n")
     
     print(f"Rapport généré : {output_file}")
 
