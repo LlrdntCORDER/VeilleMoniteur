@@ -1,10 +1,8 @@
 from datetime import datetime
 from PyPDF2 import PdfReader
-import os, requests, csv, re
+import os, requests, re
 import pandas as pd
 import matplotlib.pyplot as plt
-from io import BytesIO
-import base64
 
 
 def generate_date(mode="default"):

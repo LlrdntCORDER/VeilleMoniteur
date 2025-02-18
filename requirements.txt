@@ -1,0 +1,9 @@
+datetime
+PyPDF2
+PdfReader
+os
+requests
+re
+pandas
+matplotlib
+matplotlib.pyplot
