@@ -49,7 +49,7 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     df.to_csv(output_csv, sep=";", index=False)
     return NewsFlag
 
-def generate_markdown_report(csv_file="result\\Data.csv",output_file="README.md"):
+def generate_markdown_report(csv_file="result/Data.csv",output_file="README.md"):
     # Charger les données
     df = pd.read_csv(csv_file, delimiter=';')
     df["Date"] = pd.to_datetime(df["Date"])  # Convertir en datetime
@@ -117,7 +117,7 @@ def generate_markdown_report(csv_file="result\\Data.csv",output_file="README.md"
     
     print(f"Rapport généré : {output_file}")
 
-def generate_markdown_empty_report(csv_file="result\\Data.csv",output_file="README.md"):
+def generate_markdown_empty_report(csv_file="result/Data.csv",output_file="README.md"):
     # Charger les données
     df = pd.read_csv(csv_file, delimiter=';')
     df["Date"] = pd.to_datetime(df["Date"])  # Convertir en datetime
