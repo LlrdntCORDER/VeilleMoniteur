@@ -78,7 +78,7 @@ def generate_markdown_report(csv_file="result/Data.csv",output_file="README.md")
     last_day_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Dernière journée")
     plt.ylabel("")
-    plt.savefig("img\\last_day_pie.png")
+    plt.savefig("img/last_day_pie.png")
     plt.close()
     
     # Tableau des données pour la dernière journée
@@ -92,7 +92,7 @@ def generate_markdown_report(csv_file="result/Data.csv",output_file="README.md")
     total_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Global")
     plt.ylabel("")
-    plt.savefig("img\\global_pie.png")
+    plt.savefig("img/global_pie.png")
     plt.close()
     
     # Nombre de termes cités par jour
@@ -106,7 +106,7 @@ def generate_markdown_report(csv_file="result/Data.csv",output_file="README.md")
     plt.ylabel("Nombre d'occurrences")
     plt.xticks(rotation=45)
     plt.grid()
-    plt.savefig("img\\evolution_line.png")
+    plt.savefig("img/evolution_line.png")
     plt.close()
     
     # Génération du Markdown
@@ -143,7 +143,7 @@ def generate_markdown_empty_report(csv_file="result/Data.csv",output_file="READM
     total_terms.plot(kind="pie", autopct='%1.1f%%')
     plt.title("Termes les plus cités - Global")
     plt.ylabel("")
-    plt.savefig("img\\global_pie.png")
+    plt.savefig("img/lobal_pie.png")
     plt.close()
     
     # Nombre de termes cités par jour
@@ -157,7 +157,7 @@ def generate_markdown_empty_report(csv_file="result/Data.csv",output_file="READM
     plt.ylabel("Nombre d'occurrences")
     plt.xticks(rotation=45)
     plt.grid()
-    plt.savefig("img\\evolution_line.png")
+    plt.savefig("img/evolution_line.png")
     plt.close()
     
     # Génération du Markdown
