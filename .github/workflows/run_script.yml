@@ -25,3 +25,13 @@ jobs:
 
       - name: Run script
         run: python MoniteurBelgeScrapper.py  # Remplace par le nom de ton script
+
+      - name: Commit and push results
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Mise à jour des résultats du script"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
