@@ -30,23 +30,33 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     reader = PdfReader(pdf_path)
     results = []
     NewsFlag = True
-    term_regex = re.compile(r"(?:\\b|\\s|,|\\.|:|;|/|!|\\?)({})(?:\\b|\\s|,|\\.|:|;|/|!|\\?)".format("|".join(map(re.escape, terms))), re.IGNORECASE)
+    term_regex = re.compile(r"(?:\b|\s|,|\.|:|;|/|!|\?)({})(?:\b|\s|,|\.|:|;|/|!|\?)".format("|".join(map(re.escape, terms))), re.IGNORECASE)
+    
     for page_num, page in enumerate(reader.pages, start=1):
         text = page.extract_text()
         if not text:
             continue
         matches = term_regex.findall(text)
-        if len(matches)==0:
-             NewsFlag = False
-             results.append([date, "Rien ne nous concerne aujourd'hui !", "NA"])
+        if len(matches) == 0:
+            NewsFlag = False
+            results.append([date, "Rien ne nous concerne aujourd'hui !", "NA"])
         else:
             for match in matches:
                 results.append([date, match.lower().replace("\n", ""), page_num])
+    
     df = pd.DataFrame(results, columns=["Date", "Terme", "Numéro de page"])
     df["Occurences"] = df.groupby(["Terme", "Numéro de page"])['Terme'].transform('count')
     df.drop_duplicates(inplace=True)
+    
     os.makedirs(os.path.dirname(output_csv), exist_ok=True)
+    
+    # Vérifier si le fichier CSV existe pour ajouter les nouvelles données
+    if os.path.exists(output_csv):
+        df_existing = pd.read_csv(output_csv, sep=";")
+        df = pd.concat([df_existing, df], ignore_index=True)
+    
     df.to_csv(output_csv, sep=";", index=False)
+    
     return NewsFlag
 
 def generate_markdown_report(csv_file="result/Data.csv",output_file="README.md"):
