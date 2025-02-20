@@ -54,6 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: result/Data.csv
-          asset_name: Data.csv
-          asset_content_type: text/csv
+          asset_path: result/Data.xlsx
+          asset_name: Data.xlsx
+          asset_content_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+

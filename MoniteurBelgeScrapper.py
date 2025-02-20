@@ -56,6 +56,7 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
         df = pd.concat([df_existing, df], ignore_index=True)
     
     df.to_csv(output_csv, sep=";", index=False)
+    df.to_excel("result/Data.xlsx", index=False, engine="openpyxl")
     
     return NewsFlag
 def generate_markdown_report(csv_file="result/Data.csv", output_file="README.md"):
@@ -95,12 +96,12 @@ def generate_markdown_report(csv_file="result/Data.csv", output_file="README.md"
     plt.close()
 
     # Génération du README avec le lien vers la dernière release
-    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.csv"
+    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx"
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"# Rapport quotidien\n\n")
         f.write(f"**Dernière mise à jour : {last_date}**\n\n")
-        f.write(f"[📥 Télécharger les résultats en CSV]({release_url})\n\n")
+        f.write(f"[📥 Télécharger la liste des obeservation en XLSX]({release_url})\n\n")
         f.write("## Termes les plus cités (dernière journée)\n\n")
         f.write("![Graphique](img/last_day_pie.png)\n\n")
         f.write("### Données de la dernière journée\n\n")
@@ -146,13 +147,13 @@ def generate_markdown_empty_report(csv_file="result/Data.csv",output_file="READM
     plt.close()
 
     # Génération du README avec le lien vers la dernière release
-    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.csv"
+    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx"
     
     # Génération du Markdown
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"# Rapport quotidien\n\n")
         f.write(f"**Dernière mise à jour : {last_date}**\n\n")
-        f.write(f"[📥 Télécharger les résultats en CSV]({release_url})\n\n")
+        f.write(f"[📥 Télécharger la liste des obeservation en XLSX]({release_url})\n\n")
 
         f.write("## Pas d'actualités aujourd'hui 🥱\n\n")
         f.write("\n\n")
