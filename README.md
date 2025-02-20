@@ -2,7 +2,7 @@
 
 **Dernière mise à jour : 2025-02-20**
 
-[📥 Télécharger les résultats en CSV](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.csv)
+[📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
 ## Pas d'actualités aujourd'hui 🥱
 
