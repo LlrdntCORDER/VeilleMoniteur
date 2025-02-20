@@ -3,6 +3,7 @@ from PyPDF2 import PdfReader
 import os, requests, re
 import pandas as pd
 import matplotlib.pyplot as plt
+import openpyxl
 
 
 def generate_date(mode="default"):
