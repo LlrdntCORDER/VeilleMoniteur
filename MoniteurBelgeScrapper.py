@@ -95,7 +95,7 @@ def generate_markdown_report(csv_file="result/Data.csv", output_file="README.md"
     plt.close()
 
     # Génération du README avec le lien vers la dernière release
-    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/data.csv"
+    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.csv"
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"# Rapport quotidien\n\n")
@@ -146,14 +146,14 @@ def generate_markdown_empty_report(csv_file="result/Data.csv",output_file="READM
     plt.close()
 
     # Génération du README avec le lien vers la dernière release
-    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/data.csv"
+    release_url = "https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.csv"
     
     # Génération du Markdown
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"# Rapport quotidien\n\n")
         f.write(f"**Dernière mise à jour : {last_date}**\n\n")
         f.write(f"[📥 Télécharger les résultats en CSV]({release_url})\n\n")
-        
+
         f.write("## Pas d'actualités aujourd'hui 🥱\n\n")
         f.write("\n\n")
         
