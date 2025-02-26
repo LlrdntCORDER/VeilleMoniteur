@@ -178,7 +178,6 @@ PDFPath = download_pdf(url)
 
 SearchTermList = ["pesticide", "produit phytosanitaire", "zone tampon","autorisation", "produits phytopharmaceutiques","Autorisation","service","Service","gouvernement","Gouvernement", "herbicide", "local phyto", "plantes exotiques envahissante", "herbicides"]
 ModificationRate = extract_terms_from_pdf(PDFPath, SearchTermList, date, "result/Data.csv")
-print (ModificationRate)
 if ModificationRate :
     generate_markdown_report()
 else :
