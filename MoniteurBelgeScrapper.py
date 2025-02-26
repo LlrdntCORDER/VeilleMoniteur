@@ -39,12 +39,14 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
             continue
         matches = term_regex.findall(text)
         if len(matches) == 0:
-            NewsFlag = False
-            results.append([date, "Rien ne nous concerne aujourd'hui !", "NA"])
+            pass
         else:
             for match in matches:
                 results.append([date, match.lower().replace("\n", ""), page_num])
     
+    if len (results)== 0:
+        NewsFlag = False
+        results.append([date, "Rien ne nous concerne aujourd'hui !", "NA"])
     df = pd.DataFrame(results, columns=["Date", "Terme", "Numéro de page"])
     df["Occurences"] = df.groupby(["Terme", "Numéro de page"])['Terme'].transform('count')
     df.drop_duplicates(inplace=True)
@@ -60,6 +62,8 @@ def extract_terms_from_pdf(pdf_path, terms, date, output_csv):
     df.to_excel("result/Data.xlsx", index=False, engine="openpyxl")
     
     return NewsFlag
+
+
 def generate_markdown_report(csv_file="result/Data.csv", output_file="README.md"):
     df = pd.read_csv(csv_file, delimiter=';')
     df["Date"] = pd.to_datetime(df["Date"])  
@@ -174,6 +178,7 @@ PDFPath = download_pdf(url)
 
 SearchTermList = ["pesticide", "produit phytosanitaire", "zone tampon","autorisation", "produits phytopharmaceutiques","Autorisation","service","Service","gouvernement","Gouvernement", "herbicide", "local phyto", "plantes exotiques envahissante", "herbicides"]
 ModificationRate = extract_terms_from_pdf(PDFPath, SearchTermList, date, "result/Data.csv")
+print (ModificationRate)
 if ModificationRate :
     generate_markdown_report()
 else :
