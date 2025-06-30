@@ -1,21 +1,14 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2025-06-27**
+**Dernière mise à jour : 2025-06-30**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
-## Termes les plus cités (dernière journée)
+## Pas d'actualités aujourd'hui 🥱
 
-![Graphique](img/last_day_pie.png)
 
-### Données de la dernière journée
 
-| Terme           |   Numéro de page |   Occurences |
-|:----------------|-----------------:|-------------:|
-| eaux de surface |              113 |            1 |
-| eaux de surface |              118 |            1 |
-
-## Évolution globale
+## Évolution globale 🚀
 
 ![Graphique](img/global_pie.png)
 
