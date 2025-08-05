@@ -1,21 +1,14 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2025-08-04**
+**Dernière mise à jour : 2025-08-05**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
-## Termes les plus cités (dernière journée)
+## Pas d'actualités aujourd'hui 🥱
 
-![Graphique](img/last_day_pie.png)
 
-### Données de la dernière journée
 
-| Terme                 |   Numéro de page |   Occurences |
-|:----------------------|-----------------:|-------------:|
-| développement durable |              124 |            1 |
-| bonnes pratiques      |              126 |            1 |
-
-## Évolution globale
+## Évolution globale 🚀
 
 ![Graphique](img/global_pie.png)
 
