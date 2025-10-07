@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2025-10-06**
+**Dernière mise à jour : 2025-10-07**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,9 +10,10 @@
 
 ### Données de la dernière journée
 
-| Terme                 |   Numéro de page |   Occurences |
-|:----------------------|-----------------:|-------------:|
-| développement durable |                6 |            1 |
+| Terme           |   Numéro de page |   Occurences |
+|:----------------|-----------------:|-------------:|
+| eaux de surface |              379 |            1 |
+| eaux de surface |              381 |            1 |
 
 ## Évolution globale
 
