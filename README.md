@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-01-09**
+**Dernière mise à jour : 2026-01-12**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,12 +10,9 @@
 
 ### Données de la dernière journée
 
-| Terme                  |   Numéro de page |   Occurences |
-|:-----------------------|-----------------:|-------------:|
-| buse                   |               41 |            2 |
-| buse                   |               46 |            1 |
-| agriculture biologique |               76 |            1 |
-| agriculture biologique |               77 |            1 |
+| Terme     |   Numéro de page |   Occurences |
+|:----------|-----------------:|-------------:|
+| herbicide |              115 |            1 |
 
 ## Évolution globale
 
