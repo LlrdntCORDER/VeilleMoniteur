@@ -1,21 +1,14 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-02-06**
+**Dernière mise à jour : 2026-02-09**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
-## Termes les plus cités (dernière journée)
+## Pas d'actualités aujourd'hui 🥱
 
-![Graphique](img/last_day_pie.png)
 
-### Données de la dernière journée
 
-| Terme            |   Numéro de page |   Occurences |
-|:-----------------|-----------------:|-------------:|
-| bonnes pratiques |               50 |            2 |
-| bonnes pratiques |               57 |            2 |
-
-## Évolution globale
+## Évolution globale 🚀
 
 ![Graphique](img/global_pie.png)
 
