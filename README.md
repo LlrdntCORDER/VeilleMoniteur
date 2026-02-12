@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-02-11**
+**Dernière mise à jour : 2026-02-12**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,20 +10,12 @@
 
 ### Données de la dernière journée
 
-| Terme                          |   Numéro de page |   Occurences |
-|:-------------------------------|-----------------:|-------------:|
-| agriculture biologique         |                4 |            1 |
-| agriculture biologique         |               47 |            1 |
-| eaux souterraines              |               49 |            1 |
-| ruissellement                  |               54 |            1 |
-| herbicides                     |               60 |            1 |
-| eaux de surface                |               60 |            2 |
-| phytolicence                   |               73 |            1 |
-| herbicides                     |               73 |            1 |
-| eaux souterraines              |               73 |            1 |
-| effluents phytopharmaceutiques |               73 |            1 |
-| agriculture biologique         |              172 |            4 |
-| bonnes pratiques               |              183 |            1 |
+| Terme                 |   Numéro de page |   Occurences |
+|:----------------------|-----------------:|-------------:|
+| développement durable |                6 |            3 |
+| développement durable |                7 |            9 |
+| ruissellement         |               12 |            3 |
+| développement durable |               24 |            2 |
 
 ## Évolution globale
 
