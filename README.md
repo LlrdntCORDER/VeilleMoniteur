@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-02-19**
+**Dernière mise à jour : 2026-02-23**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,11 +10,9 @@
 
 ### Données de la dernière journée
 
-| Terme            |   Numéro de page |   Occurences |
-|:-----------------|-----------------:|-------------:|
-| bonnes pratiques |               42 |            1 |
-| eaux de surface  |               69 |            1 |
-| eaux de surface  |               73 |            1 |
+| Terme     |   Numéro de page |   Occurences |
+|:----------|-----------------:|-------------:|
+| herbicide |               10 |            1 |
 
 ## Évolution globale
 
