@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-02-27**
+**Dernière mise à jour : 2026-03-02**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,9 +10,11 @@
 
 ### Données de la dernière journée
 
-| Terme            |   Numéro de page |   Occurences |
-|:-----------------|-----------------:|-------------:|
-| bonnes pratiques |              284 |            1 |
+| Terme             |   Numéro de page |   Occurences |
+|:------------------|-----------------:|-------------:|
+| eaux souterraines |              222 |            1 |
+| eaux souterraines |              231 |            1 |
+| bonnes pratiques  |              248 |            4 |
 
 ## Évolution globale
 
