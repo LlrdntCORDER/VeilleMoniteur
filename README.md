@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-04-09**
+**Dernière mise à jour : 2026-04-10**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,13 +10,9 @@
 
 ### Données de la dernière journée
 
-| Terme         |   Numéro de page |   Occurences |
-|:--------------|-----------------:|-------------:|
-| feu bactérien |                2 |            1 |
-| feu bactérien |               21 |            4 |
-| zone tampon   |               21 |            1 |
-| feu bactérien |               25 |            2 |
-| feu bactérien |               29 |            1 |
+| Terme                 |   Numéro de page |   Occurences |
+|:----------------------|-----------------:|-------------:|
+| développement durable |              219 |            1 |
 
 ## Évolution globale
 
