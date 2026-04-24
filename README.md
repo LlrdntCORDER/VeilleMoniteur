@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-04-23**
+**Dernière mise à jour : 2026-04-24**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,12 +10,9 @@
 
 ### Données de la dernière journée
 
-| Terme                  |   Numéro de page |   Occurences |
-|:-----------------------|-----------------:|-------------:|
-| réduction de la dérive |               95 |            1 |
-| herbicides             |              141 |            1 |
-| herbicides             |              142 |            1 |
-| développement durable  |              181 |            1 |
+| Terme       |   Numéro de page |   Occurences |
+|:------------|-----------------:|-------------:|
+| zone tampon |               46 |            1 |
 
 ## Évolution globale
 
