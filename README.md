@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-05-29**
+**Dernière mise à jour : 2026-06-01**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,10 +10,10 @@
 
 ### Données de la dernière journée
 
-| Terme                 |   Numéro de page |   Occurences |
-|:----------------------|-----------------:|-------------:|
-| développement durable |               44 |            2 |
-| développement durable |               45 |            1 |
+| Terme            |   Numéro de page |   Occurences |
+|:-----------------|-----------------:|-------------:|
+| bonnes pratiques |               99 |            2 |
+| bonnes pratiques |              103 |            1 |
 
 ## Évolution globale
 
