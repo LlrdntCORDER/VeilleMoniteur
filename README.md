@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-06-10**
+**Dernière mise à jour : 2026-06-11**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,14 +10,10 @@
 
 ### Données de la dernière journée
 
-| Terme            |   Numéro de page |   Occurences |
-|:-----------------|-----------------:|-------------:|
-| lutte intégrée   |                6 |            2 |
-| substance active |               39 |            1 |
-| lutte intégrée   |              104 |            1 |
-| bonnes pratiques |              138 |            1 |
-| bonnes pratiques |              141 |            1 |
-| bonnes pratiques |              144 |            1 |
+| Terme                 |   Numéro de page |   Occurences |
+|:----------------------|-----------------:|-------------:|
+| développement durable |                8 |            2 |
+| développement durable |              233 |           10 |
 
 ## Évolution globale
 
