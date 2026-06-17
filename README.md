@@ -1,20 +1,14 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-06-16**
+**Dernière mise à jour : 2026-06-17**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
-## Termes les plus cités (dernière journée)
+## Pas d'actualités aujourd'hui 🥱
 
-![Graphique](img/last_day_pie.png)
 
-### Données de la dernière journée
 
-| Terme            |   Numéro de page |   Occurences |
-|:-----------------|-----------------:|-------------:|
-| substance active |               57 |            1 |
-
-## Évolution globale
+## Évolution globale 🚀
 
 ![Graphique](img/global_pie.png)
 
