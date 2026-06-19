@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-06-18**
+**Dernière mise à jour : 2026-06-19**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,11 +10,10 @@
 
 ### Données de la dernière journée
 
-| Terme                |   Numéro de page |   Occurences |
-|:---------------------|-----------------:|-------------:|
-| substance active     |               38 |            1 |
-| phytolicence         |               38 |            3 |
-| distribution/conseil |               38 |            2 |
+| Terme                     |   Numéro de page |   Occurences |
+|:--------------------------|-----------------:|-------------:|
+| organismes de quarantaine |              228 |            1 |
+| organismes de quarantaine |              232 |            1 |
 
 ## Évolution globale
 
