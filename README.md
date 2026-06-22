@@ -1,6 +1,6 @@
 # Rapport quotidien
 
-**Dernière mise à jour : 2026-06-19**
+**Dernière mise à jour : 2026-06-22**
 
 [📥 Télécharger la liste des obeservation en XLSX](https://github.com/LlrdntCORDER/VeilleMoniteur/releases/latest/download/Data.xlsx)
 
@@ -10,10 +10,12 @@
 
 ### Données de la dernière journée
 
-| Terme                     |   Numéro de page |   Occurences |
-|:--------------------------|-----------------:|-------------:|
-| organismes de quarantaine |              228 |            1 |
-| organismes de quarantaine |              232 |            1 |
+| Terme                 |   Numéro de page |   Occurences |
+|:----------------------|-----------------:|-------------:|
+| développement durable |               83 |            1 |
+| développement durable |               85 |            1 |
+| développement durable |               87 |            1 |
+| développement durable |               88 |            1 |
 
 ## Évolution globale
 
